@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			var x = 7;
+			var y = 9;
+			var p = 3;
+			var q = 5;
+			var res = 55;
+			
+			function goo(){
+				var y = 315;
+				res = x+y;
+			}
+			
+			function staticSCP(){
+				var x = 513;
+				return goo();
+			}
+			
+			staticSCP();
+			
+			document.write("staticSCP:", res);
+			
+			document.write("\n\n");
+			 
+			function foo(){
+				q = 315;
+				res = p+q;
+			}
+			
+			function dynamicSCP(){
+				p = 513;
+				return foo();
+			}
+			
+			dynamicSCP();
+			
+			document.write("dynamicSCP:", res);		
+			
+		</script>
+	</head>
+
+</html>
